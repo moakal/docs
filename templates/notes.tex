@@ -1,0 +1,43 @@
+\documentclass{book}
+
+% PKG
+\usepackage[scale=1,angle=0, opacity=1, firstpage=true]{background}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+  \fancyhf{}
+  \fancyheadoffset{0mm}
+  \renewcommand{\headrulewidth}{0mm}
+  \cfoot{\thepage}
+\usepackage[paperheight=255mm, paperwidth=190mm, margin=25mm, top=50mm]{geometry}
+\usepackage{hyperref}
+  \hypersetup{colorlinks=true, linkcolor=black, filecolor=magenta, urlcolor=blue, pdfpagemode=FullScreen}  
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{titlesec}
+  \titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
+
+\begin{document}
+
+% TITLE PAGE
+\newgeometry{margin=50mm, top=100mm}
+  \pagenumbering{gobble}
+  \begin{titlepage}
+    \backgroundsetup{position=current page.north west, color=orange, nodeanchor=north west, contents={\rule{10mm}{\paperheight}}}
+    \centering
+    \Huge\ttfamily{TITLE} \\
+    \vspace{10mm}
+    \Large$\overline{\verb|ak|}$ \\
+    \vspace*{\fill}
+    \small\href{https://github.com/moakal}{\ttfamily{github.com/moakal}}
+  \end{titlepage}
+\restoregeometry
+
+\tableofcontents
+\pagenumbering{arabic}
+
+\chapter{Chapter}
+
+\lipsum
+
+
+\end{document}
