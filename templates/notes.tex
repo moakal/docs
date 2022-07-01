@@ -3,11 +3,13 @@
 % PKG
 \usepackage[scale=1,angle=0, opacity=1, firstpage=true]{background}
 \usepackage{fancyhdr}
-\pagestyle{fancy}
-  \fancyhf{}
+  \fancypagestyle{plain}{%
+  \fancyhf{} % clear all header and footer fields
   \fancyheadoffset{0mm}
-  \renewcommand{\headrulewidth}{0mm}
-  \cfoot{\thepage}
+  \fancyfoot[RO, LE]{\ttfamily{\thepage}} % except the center
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}}
+  \pagestyle{plain}
 \usepackage[paperheight=255mm, paperwidth=190mm, margin=25mm, top=50mm]{geometry}
 \usepackage{hyperref}
   \hypersetup{colorlinks=true, linkcolor=black, filecolor=magenta, urlcolor=blue, pdfpagemode=FullScreen}  
