@@ -1,0 +1,22 @@
+body { font-family: 'Helvetica'; font-size: 20px; margin: 5% 25% 5% 5%}
+a { text-decoration: none; }
+
+th, td { padding: 10px; }
+
+@media (prefers-color-scheme: dark) {
+  body, input { background-color: #111111; color: #eeeeee; }
+  .bookmark { background-color: transparent; color: #eeeeee; }
+  a { color: blue; }
+  th, td { background-color: #222222; }
+  td:hover, .index:hover { background-color: #333333; font-weight: bold; }
+  .index { background-color: transparent; color: #eeeeee; padding: 2px; }
+}
+
+@media (prefers-color-scheme: light) {
+  body, input { background-color: #eeeeee; color: #111111; }
+  .bookmark { background-color: transparent; color: #111111; }
+  a { color: blue; }
+  th, td { background-color: #dddddd;  }
+  td:hover, .index:hover { background-color: #cccccc; font-weight: bold; }
+  .index { background-color: transparent; color: #111111; padding: 2px; }
+}
